@@ -1,20 +1,18 @@
 import React from 'react';
-import { Route, Router, Switch } from 'react-router';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Normalize from 'normalize.css';
-import GlobalStyle from './GlobalStyle.css';
+import 'normalize.css';
+import './GlobalStyle.css';
 
 function App() {
   return (
-    <Router>
-      <Normalize />
-      <GlobalStyle />
+    <BrowserRouter>
       <Switch>
         <Route path="/search">Search</Route>
         <Route path="/">Home</Route>
       </Switch>
       App Placeholder
-    </Router>
+    </BrowserRouter>
   );
 }
 
