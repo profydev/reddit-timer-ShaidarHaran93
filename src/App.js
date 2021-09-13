@@ -6,18 +6,20 @@ import { Normalize } from 'styled-normalize';
 import GlobalStyle from './GlobalStyle';
 import theme from './theme';
 
+import Header from './Components/Header';
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Normalize />
         <GlobalStyle />
+        <Header />
         <Switch>
-          <Route exact path="/search">Search</Route>
-          <Route path="/">Home</Route>
+          <Route exact path="/">Home</Route>
+          <Route path="/search">Search</Route>
           <Route>404 - Not Found</Route>
         </Switch>
-        App Placeholder
       </BrowserRouter>
     </ThemeProvider>
   );
