@@ -43,16 +43,15 @@ const GlobalStyle = createGlobalStyle`
     src: url("/fonts/Bitter-Regular.woff2") format("woff2"),
  url("/fonts/Bitter-Regular.woff") format("woff");
   }
+  *, *::before, *::after{
+    box-sizing: border-box;
+  }
 
   body {
     font-family: ${(props) => props.theme.font.family.default};
     font-size: ${(props) => props.theme.font.size.default};
     line-height: ${(props) => props.theme.font.lineHeight.default};
     color: ${(props) => props.theme.color.text};
-  }
-  a{
-    text-decoration: none;
-    color: ${(props) => props.theme.color.text}
   }
 `;
 
